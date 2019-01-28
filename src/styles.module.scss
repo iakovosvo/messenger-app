@@ -1,0 +1,172 @@
+$color-threads-background: #222831;
+$color-messages-background: #00adb5;
+$color-text: #eeeeee;
+$color-text-background: #00adb5;
+$color-author: #00adb5;
+$color-message-background: #eeeeee;
+$color-title: #eeeeee;
+$color-button: #393e46;
+$color-button-text: #222831;
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background: $color-threads-background;
+
+  .threads {
+    flex: 3;
+    overflow-y: scroll;
+
+    &Title {
+      color: $color-text;
+      font-size: 3rem;
+      margin: 2rem;
+      padding: 1rem;
+    }
+  }
+
+  .messages {
+    flex: 6;
+    background: $color-messages-background;
+    overflow-y: scroll;
+  }
+}
+
+.message {
+  background: $color-message-background;
+  color: $color-text;
+  font-size: 3rem;
+  padding: 2rem;
+  margin: 1rem;
+
+  &Author {
+    color: $color-author;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 1.4rem;
+  }
+
+  &Text {
+    background: $color-text-background;
+    border-radius: 8px;
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding: 1.8rem;
+  }
+
+  &Title {
+    border-radius: 8px;
+    color: $color-title;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+  }
+
+  &Edit {
+    border: none;
+    background: none;
+    font-size: 1.6rem;
+    color: #222831;
+    margin-right: 1rem;
+
+    &:hover {
+      color: #7d848f;
+    }
+  }
+
+  &Delete {
+    border: none;
+    background: none;
+    font-size: 1.6rem;
+    color: #222831;
+
+    &:hover {
+      color: #7d848f;
+    }
+  }
+}
+
+.messageList {
+  background: $color-message-background;
+  border-radius: 8px;
+  box-shadow: 0 1.5rem 4rem rgba(black, 0.1);
+  margin: 0 3rem;
+}
+
+.form {
+  display: flex;
+  padding: 2rem;
+  margin: 1rem;
+
+  .input {
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.1);
+    color: $color-button-text;
+    flex: 4;
+    font-size: 2rem;
+    padding: 1.4rem;
+    border: none;
+    border-radius: 8px;
+  }
+  .button {
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.1);
+    background: $color-button;
+    border: none;
+    border-radius: 8px;
+    color: $color-text;
+    flex: 1;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1.4rem;
+    text-transform: uppercase;
+    margin-left: 2rem;
+  }
+}
+
+.thread {
+  cursor: pointer;
+  background: #393e46;
+  color: $color-text;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 8px;
+
+  &Open {
+    background: #555c66;
+  }
+
+  &:hover {
+    background: #555c66;
+  }
+
+  &Title {
+    color: $color-text;
+    font-size: 2rem;
+    margin: 2rem;
+  }
+
+  &Delete {
+    color: $color-text;
+    border: none;
+    background: none;
+
+    &:hover {
+      color: rgba(185, 173, 173, 0.933);
+    }
+  }
+
+  &Edit {
+    color: $color-text;
+    border: none;
+    background: none;
+
+    &:hover {
+      color: rgba(185, 173, 173, 0.933);
+    }
+  }
+}
